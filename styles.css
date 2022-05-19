@@ -2,6 +2,7 @@
     margin: 0;
     text-decoration: none;
     list-style: none;    
+    overflow-x: hidden;
     color: white;
 }
 nav {
@@ -84,9 +85,9 @@ header {
 }
 .but button {
     background: #d93434;
-  background-image: -webkit-linear-gradient(top, #d93434, #b82b2b);
+  /* background-image: -webkit-linear-gradient(top, #d93434, #b82b2b);
   background-image: -moz-linear-gradient(top, #d93434, #b82b2b);
-  background-image: -ms-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -ms-linear-gradient(top, #d93434, #b82b2b); */
   background-image: -o-linear-gradient(top, #d93434, #b82b2b);
   background-image: linear-gradient(to bottom, #d93434, #b82b2b);
   -webkit-border-radius: 30;
@@ -160,4 +161,100 @@ footer {
 }
 .foote {
     text-align: center;
+}
+
+
+@media screen and (max-width : 600px){
+    .pics{
+        display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 12px;
+grid-row-gap: 10px;
+
+    }
+
+    nav>ul {
+        display: block;
+        column-gap: 5%; 
+        padding: 1%;
+    }
+    
+    .top2-flex {
+        display: flex;
+        
+        
+    }
+
+    .top2-flex h1{
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    nav>div>h1 {
+        width: 100%;
+        margin-left: 7%;    
+    }
+    form {
+        width: 60%;
+        padding: 1%;
+    }
+
+
+    .top1-flex {
+        background-color: #2B2B2B;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 38%;
+    }
+
+}
+ 
+@media screen and (min-width : 600px){
+    .pics{
+        display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 12px;
+grid-row-gap: 10px;
+
+    }
+
+    .top1-flex {
+        background-color: #2B2B2B;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 38%;
+    
+}
+
+
+
+@media only screen and (min-width : 762px) and (min-width:900px) {
+
+    .pics{
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 10px 10px; 
+        grid-template-areas: 
+          ". . ."
+          ". . ."; 
+    
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 992px) {
+    .pics {
+        margin: 1em auto;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 25px;
+        grid-row-gap: 30px;
+    }
+}
 }
